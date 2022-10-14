@@ -12,3 +12,4 @@ while money_capital >= spend:
     spend *= increase
     month += 1
 print(month)
+
