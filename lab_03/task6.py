@@ -3,3 +3,4 @@ maxim = max(list_numbers)
 maxindex = list_numbers.index(maxim)
 list_numbers[-1], list_numbers[maxindex] = list_numbers[maxindex], list_numbers[-1]
 print(list_numbers)
+
