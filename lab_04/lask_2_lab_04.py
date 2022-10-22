@@ -5,7 +5,7 @@ def delete(list_, index=None):
         list_ = list_[:-1]
     else:
         list_ = list_[0:index] + list_[index+1:]
-    return(list_)
+    return list_
 
 
 
