@@ -8,11 +8,9 @@ slowar = {
 def get_count_char(str_):
     # str_ = sorted(str_) если требуется сортировка
     str_ = "".join(c for c in str_ if c.isalpha()).lower()  # нижний регистр, зачистка
+    counter = 0
     for letter in str_:
-        if letter not in slowar:
-            slowar[letter] = 1  # внесение каждой буквы в словарь
-        else:
-            slowar[letter] += 1 # счетчик
+        slowar[letter] = slowar.get(letter, counter) + 1  # заполнение словаря
     return slowar
 
 
