@@ -12,14 +12,12 @@ def get_count_char(str_):
         if letter not in slowar:
             slowar[letter] = 1  # внесение каждой буквы в словарь
         else:
-            slowar[letter] += 1
+            slowar[letter] += 1 # счетчик
     return slowar
 
 
 def get_persent_char(dict_):
-    counter = 0  # количество всех букв
-    for i in dict_:
-        counter += dict_[i]
+    counter = sum(dict_.values())  # количество всех букв
     for i in dict_:
         dict_[i] = round(dict_[i] * 100 / counter, 2)  # округление до 2 знаков
     return dict_
@@ -31,4 +29,4 @@ main_str = """
     Далее нужно отсортировать слова в алфавитном порядке, а после сортировки склеить их с помощью метода строк join. Приступим!!!!
 """
 print(get_count_char(main_str))
-print(get_persent_char(slowar))
+# print(get_persent_char(slowar))
